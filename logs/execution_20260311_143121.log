@@ -1,0 +1,210 @@
+2026-03-11 14:32:33,368 - llm_client - INFO - Initialized OFFLINE template engine (no API key required)
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized classification agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized domain_analysis agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized epic_decomposition agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized positive_test agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized negative_edge agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized security_nf agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized traceability agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized deduplication agent
+2026-03-11 14:32:33,369 - orchestrator - INFO - Initialized excel_export agent
+2026-03-11 14:32:33,371 - orchestrator - INFO - ================================================================================
+2026-03-11 14:32:33,371 - orchestrator - INFO - STARTING AGENT ORCHESTRATION
+2026-03-11 14:32:33,371 - orchestrator - INFO - ================================================================================
+2026-03-11 14:32:33,372 - orchestrator - INFO - 
+[1/8] Running Classification Agent...
+2026-03-11 14:32:33,372 - ClassificationAgent - INFO - ============================================================
+2026-03-11 14:32:33,372 - ClassificationAgent - INFO - Starting ClassificationAgent
+2026-03-11 14:32:33,372 - ClassificationAgent - INFO - ============================================================
+2026-03-11 14:32:33,372 - ClassificationAgent - INFO - Analyzing document for classification...
+2026-03-11 14:32:33,373 - ClassificationAgent - INFO - Completed ClassificationAgent in 0.00 seconds
+2026-03-11 14:32:33,373 - ClassificationAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,373 - orchestrator - INFO - 
+[2/9] Running Epic Decomposition Agent...
+2026-03-11 14:32:33,373 - EpicDecompositionAgent - INFO - ============================================================
+2026-03-11 14:32:33,373 - EpicDecompositionAgent - INFO - Starting EpicDecompositionAgent
+2026-03-11 14:32:33,373 - EpicDecompositionAgent - INFO - ============================================================
+2026-03-11 14:32:33,373 - EpicDecompositionAgent - INFO - Decomposing Epic into Features & User Stories...
+2026-03-11 14:32:33,380 - EpicDecompositionAgent - INFO - Decomposed into 3 features, 6 user stories
+2026-03-11 14:32:33,381 - EpicDecompositionAgent - INFO - Completed EpicDecompositionAgent in 0.01 seconds
+2026-03-11 14:32:33,381 - EpicDecompositionAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,382 - orchestrator - INFO -   → 6 user stories extracted
+2026-03-11 14:32:33,382 - orchestrator - INFO - 
+  Story 1/6: US-001 — Apply for Leave
+2026-03-11 14:32:33,382 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,382 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-11 14:32:33,382 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,383 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-11 14:32:33,383 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.00 seconds
+2026-03-11 14:32:33,383 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,384 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,384 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-11 14:32:33,384 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,384 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-11 14:32:33,385 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-11 14:32:33,385 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,385 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,385 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-11 14:32:33,385 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,385 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-11 14:32:33,387 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-11 14:32:33,387 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,387 - SecurityNFAgent - INFO - ============================================================
+2026-03-11 14:32:33,387 - SecurityNFAgent - INFO - Starting SecurityNFAgent
+2026-03-11 14:32:33,387 - SecurityNFAgent - INFO - ============================================================
+2026-03-11 14:32:33,387 - SecurityNFAgent - INFO - Generating security and non-functional test cases...
+2026-03-11 14:32:33,388 - SecurityNFAgent - INFO - Completed SecurityNFAgent in 0.00 seconds
+2026-03-11 14:32:33,388 - SecurityNFAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,389 - orchestrator - INFO - 
+  Story 2/6: US-002 — Leave Cancellation
+2026-03-11 14:32:33,389 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,389 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-11 14:32:33,389 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,389 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-11 14:32:33,390 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.00 seconds
+2026-03-11 14:32:33,391 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,391 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,391 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-11 14:32:33,391 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,391 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-11 14:32:33,392 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-11 14:32:33,392 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,392 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,392 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-11 14:32:33,392 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,393 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-11 14:32:33,393 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-11 14:32:33,393 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,394 - orchestrator - INFO - 
+  Story 3/6: US-003 — Manager Approve / Reject Leave
+2026-03-11 14:32:33,394 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,394 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-11 14:32:33,394 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,394 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-11 14:32:33,394 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.00 seconds
+2026-03-11 14:32:33,394 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,395 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,395 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-11 14:32:33,395 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,395 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-11 14:32:33,395 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-11 14:32:33,395 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,396 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,396 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-11 14:32:33,396 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,396 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-11 14:32:33,397 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-11 14:32:33,397 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,397 - orchestrator - INFO - 
+  Story 4/6: US-004 — Multi-Level Leave Approval
+2026-03-11 14:32:33,397 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,397 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-11 14:32:33,398 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,398 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-11 14:32:33,398 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.00 seconds
+2026-03-11 14:32:33,398 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,398 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,398 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-11 14:32:33,398 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,399 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-11 14:32:33,399 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-11 14:32:33,399 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,399 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,399 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-11 14:32:33,399 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,400 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-11 14:32:33,400 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-11 14:32:33,400 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,401 - orchestrator - INFO - 
+  Story 5/6: US-005 — Leave Balance Enquiry
+2026-03-11 14:32:33,401 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,401 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-11 14:32:33,401 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,401 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-11 14:32:33,401 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.00 seconds
+2026-03-11 14:32:33,401 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,401 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,401 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-11 14:32:33,401 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,401 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-11 14:32:33,402 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-11 14:32:33,402 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,402 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,402 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-11 14:32:33,402 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,402 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-11 14:32:33,403 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-11 14:32:33,403 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,403 - orchestrator - INFO - 
+  Story 6/6: US-006 — Leave History View
+2026-03-11 14:32:33,403 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,403 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-11 14:32:33,403 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-11 14:32:33,403 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-11 14:32:33,404 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.00 seconds
+2026-03-11 14:32:33,404 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,404 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,404 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-11 14:32:33,404 - PositiveTestAgent - INFO - ============================================================
+2026-03-11 14:32:33,404 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-11 14:32:33,405 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-11 14:32:33,405 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,405 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,405 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-11 14:32:33,405 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-11 14:32:33,405 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-11 14:32:33,406 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-11 14:32:33,406 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,412 - orchestrator - INFO - 
+[6/9] Running Traceability Agent...
+2026-03-11 14:32:33,412 - TraceabilityAgent - INFO - ============================================================
+2026-03-11 14:32:33,412 - TraceabilityAgent - INFO - Starting TraceabilityAgent
+2026-03-11 14:32:33,412 - TraceabilityAgent - INFO - ============================================================
+2026-03-11 14:32:33,412 - TraceabilityAgent - INFO - Completed TraceabilityAgent in 0.00 seconds
+2026-03-11 14:32:33,412 - TraceabilityAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,414 - orchestrator - INFO - 
+[7/9] Running Deduplication Agent...
+2026-03-11 14:32:33,414 - DeduplicationAgent - INFO - ============================================================
+2026-03-11 14:32:33,414 - DeduplicationAgent - INFO - Starting DeduplicationAgent
+2026-03-11 14:32:33,414 - DeduplicationAgent - INFO - ============================================================
+2026-03-11 14:32:33,414 - DeduplicationAgent - INFO - Original test case count: 154
+2026-03-11 14:32:33,470 - DeduplicationAgent - INFO - Found 0 duplicate pairs
+2026-03-11 14:32:33,470 - DeduplicationAgent - INFO - Found 0 redundant test cases
+2026-03-11 14:32:33,470 - DeduplicationAgent - INFO - Optimized test case count: 154
+2026-03-11 14:32:33,470 - DeduplicationAgent - INFO - Completed DeduplicationAgent in 0.06 seconds
+2026-03-11 14:32:33,470 - DeduplicationAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,473 - orchestrator - INFO - 
+[8/9] Running Excel Export Agent...
+2026-03-11 14:32:33,473 - ExcelExportAgent - INFO - ============================================================
+2026-03-11 14:32:33,473 - ExcelExportAgent - INFO - Starting ExcelExportAgent
+2026-03-11 14:32:33,473 - ExcelExportAgent - INFO - ============================================================
+2026-03-11 14:32:33,473 - ExcelExportAgent - INFO - Generating Excel workbook with 154 test cases...
+2026-03-11 14:32:33,861 - ExcelExportAgent - INFO - Excel file saved to: output/test_generation_Employ_leave_20260311_143233/test_cases.xlsx
+2026-03-11 14:32:33,861 - ExcelExportAgent - INFO - Completed ExcelExportAgent in 0.39 seconds
+2026-03-11 14:32:33,861 - ExcelExportAgent - INFO - ============================================================
+
+2026-03-11 14:32:33,862 - orchestrator - INFO - 
+Epic flow complete — 6 stories, 154 total test cases in 0.5s

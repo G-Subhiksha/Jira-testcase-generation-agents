@@ -1,0 +1,67 @@
+{
+    "agents": {
+        "classification_agent": {
+            "name": "Application & Project Classification Agent",
+            "description": "Analyzes input to classify application type, product, module, domain, and project state",
+            "enabled": true,
+            "sequence": 1,
+            "output": "classification_metadata.json"
+        },
+        "domain_analysis_agent": {
+            "name": "Domain & Requirements Analysis Agent",
+            "description": "Extracts business rules, roles, data rules, and implicit validations from requirements",
+            "enabled": true,
+            "sequence": 2,
+            "output": "domain_analysis.json"
+        },
+        "positive_test_agent": {
+            "name": "Positive Test Case Generation Agent",
+            "description": "Generates happy path and valid scenario test cases",
+            "enabled": true,
+            "sequence": 3,
+            "output": "positive_test_cases.json"
+        },
+        "negative_edge_case_agent": {
+            "name": "Negative & Edge Case Generation Agent",
+            "description": "Generates negative scenarios, boundary conditions, and edge cases using EP, BVA, pairwise techniques",
+            "enabled": true,
+            "sequence": 4,
+            "output": "negative_edge_test_cases.json"
+        },
+        "security_nf_agent": {
+            "name": "Security & Non-Functional Test Agent",
+            "description": "Generates security, performance, and non-functional test cases",
+            "enabled": true,
+            "sequence": 5,
+            "output": "security_nf_test_cases.json"
+        },
+        "traceability_agent": {
+            "name": "Requirements Traceability Agent",
+            "description": "Maps test cases to requirements/ACs and ensures complete coverage",
+            "enabled": true,
+            "sequence": 6,
+            "output": "traceability_matrix.json"
+        },
+        "deduplication_agent": {
+            "name": "Test Deduplication & Optimization Agent",
+            "description": "Identifies and removes duplicate/redundant test cases, optimizes test suite",
+            "enabled": true,
+            "sequence": 7,
+            "output": "optimized_test_suite.json"
+        },
+        "excel_export_agent": {
+            "name": "Excel Export Agent",
+            "description": "Exports final test cases and traceability matrix to Excel format",
+            "enabled": true,
+            "sequence": 8,
+            "output": "test_cases.xlsx"
+        }
+    },
+    "settings": {
+        "max_retries": 3,
+        "timeout_seconds": 300,
+        "log_level": "INFO",
+        "output_directory": "output",
+        "input_directory": "inputs"
+    }
+}

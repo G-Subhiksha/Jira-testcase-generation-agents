@@ -1,0 +1,93 @@
+2026-03-09 15:49:28,632 - llm_client - INFO - Initialized OFFLINE template engine (no API key required)
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized classification agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized domain_analysis agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized positive_test agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized negative_edge agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized security_nf agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized traceability agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized deduplication agent
+2026-03-09 15:49:28,632 - orchestrator - INFO - Initialized excel_export agent
+2026-03-09 15:49:28,633 - orchestrator - INFO - ================================================================================
+2026-03-09 15:49:28,633 - orchestrator - INFO - STARTING AGENT ORCHESTRATION
+2026-03-09 15:49:28,633 - orchestrator - INFO - ================================================================================
+2026-03-09 15:49:28,633 - orchestrator - INFO - 
+[1/8] Running Classification Agent...
+2026-03-09 15:49:28,633 - ClassificationAgent - INFO - ============================================================
+2026-03-09 15:49:28,633 - ClassificationAgent - INFO - Starting ClassificationAgent
+2026-03-09 15:49:28,634 - ClassificationAgent - INFO - ============================================================
+2026-03-09 15:49:28,634 - ClassificationAgent - INFO - Analyzing document for classification...
+2026-03-09 15:49:28,634 - ClassificationAgent - INFO - Completed ClassificationAgent in 0.00 seconds
+2026-03-09 15:49:28,634 - ClassificationAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,634 - orchestrator - INFO - 
+[2/8] Running Domain Analysis Agent...
+2026-03-09 15:49:28,634 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-09 15:49:28,634 - DomainAnalysisAgent - INFO - Starting DomainAnalysisAgent
+2026-03-09 15:49:28,635 - DomainAnalysisAgent - INFO - ============================================================
+2026-03-09 15:49:28,635 - DomainAnalysisAgent - INFO - Analyzing domain and extracting requirements...
+2026-03-09 15:49:28,644 - DomainAnalysisAgent - INFO - Completed DomainAnalysisAgent in 0.01 seconds
+2026-03-09 15:49:28,644 - DomainAnalysisAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,645 - orchestrator - INFO - 
+[3/8] Running Positive Test Agent...
+2026-03-09 15:49:28,646 - PositiveTestAgent - INFO - ============================================================
+2026-03-09 15:49:28,646 - PositiveTestAgent - INFO - Starting PositiveTestAgent
+2026-03-09 15:49:28,646 - PositiveTestAgent - INFO - ============================================================
+2026-03-09 15:49:28,646 - PositiveTestAgent - INFO - Generating positive test cases...
+2026-03-09 15:49:28,650 - PositiveTestAgent - INFO - Completed PositiveTestAgent in 0.00 seconds
+2026-03-09 15:49:28,650 - PositiveTestAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,652 - orchestrator - INFO - 
+[4/8] Running Negative & Edge Case Agent...
+2026-03-09 15:49:28,652 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-09 15:49:28,652 - NegativeEdgeCaseAgent - INFO - Starting NegativeEdgeCaseAgent
+2026-03-09 15:49:28,652 - NegativeEdgeCaseAgent - INFO - ============================================================
+2026-03-09 15:49:28,652 - NegativeEdgeCaseAgent - INFO - Generating negative and edge case test cases...
+2026-03-09 15:49:28,656 - NegativeEdgeCaseAgent - INFO - Completed NegativeEdgeCaseAgent in 0.00 seconds
+2026-03-09 15:49:28,656 - NegativeEdgeCaseAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,657 - orchestrator - INFO - 
+[5/8] Running Security & NF Agent...
+2026-03-09 15:49:28,657 - SecurityNFAgent - INFO - ============================================================
+2026-03-09 15:49:28,657 - SecurityNFAgent - INFO - Starting SecurityNFAgent
+2026-03-09 15:49:28,657 - SecurityNFAgent - INFO - ============================================================
+2026-03-09 15:49:28,657 - SecurityNFAgent - INFO - Generating security and non-functional test cases...
+2026-03-09 15:49:28,658 - SecurityNFAgent - INFO - Completed SecurityNFAgent in 0.00 seconds
+2026-03-09 15:49:28,658 - SecurityNFAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,659 - orchestrator - INFO - 
+[6/8] Running Traceability Agent...
+2026-03-09 15:49:28,659 - TraceabilityAgent - INFO - ============================================================
+2026-03-09 15:49:28,659 - TraceabilityAgent - INFO - Starting TraceabilityAgent
+2026-03-09 15:49:28,659 - TraceabilityAgent - INFO - ============================================================
+2026-03-09 15:49:28,659 - TraceabilityAgent - INFO - Completed TraceabilityAgent in 0.00 seconds
+2026-03-09 15:49:28,659 - TraceabilityAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,659 - orchestrator - INFO - 
+[7/8] Running Deduplication Agent...
+2026-03-09 15:49:28,659 - DeduplicationAgent - INFO - ============================================================
+2026-03-09 15:49:28,659 - DeduplicationAgent - INFO - Starting DeduplicationAgent
+2026-03-09 15:49:28,659 - DeduplicationAgent - INFO - ============================================================
+2026-03-09 15:49:28,659 - DeduplicationAgent - INFO - Original test case count: 33
+2026-03-09 15:49:28,979 - DeduplicationAgent - INFO - Found 5 duplicate pairs
+2026-03-09 15:49:28,979 - DeduplicationAgent - INFO - Found 0 redundant test cases
+2026-03-09 15:49:28,979 - DeduplicationAgent - INFO - Optimized test case count: 29
+2026-03-09 15:49:28,979 - DeduplicationAgent - INFO - Completed DeduplicationAgent in 0.32 seconds
+2026-03-09 15:49:28,979 - DeduplicationAgent - INFO - ============================================================
+
+2026-03-09 15:49:28,980 - orchestrator - INFO - 
+[8/8] Running Excel Export Agent...
+2026-03-09 15:49:28,980 - ExcelExportAgent - INFO - ============================================================
+2026-03-09 15:49:28,980 - ExcelExportAgent - INFO - Starting ExcelExportAgent
+2026-03-09 15:49:28,980 - ExcelExportAgent - INFO - ============================================================
+2026-03-09 15:49:28,980 - ExcelExportAgent - INFO - Generating Excel workbook with 29 test cases...
+2026-03-09 15:49:29,002 - ExcelExportAgent - INFO - Excel file saved to: output/test_generation_1_20260309_154928/test_cases.xlsx
+2026-03-09 15:49:29,003 - ExcelExportAgent - INFO - Completed ExcelExportAgent in 0.02 seconds
+2026-03-09 15:49:29,003 - ExcelExportAgent - INFO - ============================================================
+
+2026-03-09 15:49:29,003 - orchestrator - INFO - 
+================================================================================
+2026-03-09 15:49:29,003 - orchestrator - INFO - AGENT ORCHESTRATION COMPLETED SUCCESSFULLY
+2026-03-09 15:49:29,003 - orchestrator - INFO - Total execution time: 0.37 seconds
+2026-03-09 15:49:29,003 - orchestrator - INFO - Output directory: output/test_generation_1_20260309_154928
+2026-03-09 15:49:29,003 - orchestrator - INFO - ================================================================================

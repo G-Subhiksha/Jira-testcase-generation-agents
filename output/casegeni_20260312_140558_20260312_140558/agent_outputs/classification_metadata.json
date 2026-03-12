@@ -1,0 +1,31 @@
+{
+  "applicationType": "Cards & Payments",
+  "product": "Visa DPS",
+  "module": "Cards_Core",
+  "processFlows": [
+    "Card Lifecycle: Issuance → Authorization → Settlement"
+  ],
+  "terms": [
+    "Card",
+    "Authorization",
+    "Settlement",
+    "Merchant",
+    "POS",
+    "Simple",
+    "Adapter",
+    "Purpose",
+    "Define",
+    "Scope",
+    "Integration",
+    "IDocs",
+    "BAPIs",
+    "RFCs",
+    "OData"
+  ],
+  "domain": "Cards & Payments",
+  "projectState": "New",
+  "stateDrivenFocus": "Discovery, data model validation, first-time build",
+  "confidence": 0.75,
+  "agent": "Classification Agent",
+  "timestamp": "2026-03-12T14:05:58.832779"
+}

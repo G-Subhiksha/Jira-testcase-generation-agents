@@ -1,0 +1,91 @@
+{
+  "requirements": [
+    {
+      "reqId": "TC_REQ-001",
+      "description": "Apply for Leave",
+      "type": "Functional",
+      "priority": "High"
+    },
+    {
+      "reqId": "TC_REQ-002",
+      "description": "Approve Leave Request",
+      "type": "Functional",
+      "priority": "High"
+    },
+    {
+      "reqId": "TC_REQ-003",
+      "description": "Reject Leave Request",
+      "type": "Functional",
+      "priority": "High"
+    },
+    {
+      "reqId": "TC_REQ-004",
+      "description": "Leave Balance Enquiry",
+      "type": "Functional",
+      "priority": "Medium"
+    },
+    {
+      "reqId": "TC_REQ-005",
+      "description": "Leave History View",
+      "type": "Functional",
+      "priority": "Medium"
+    },
+    {
+      "reqId": "TC_REQ-006",
+      "description": "Leave Cancellation",
+      "type": "Functional",
+      "priority": "Medium"
+    },
+    {
+      "reqId": "TC_REQ-007",
+      "description": "Leave Encashment",
+      "type": "Functional",
+      "priority": "Medium"
+    },
+    {
+      "reqId": "TC_REQ-008",
+      "description": "Leave Policy Configuration",
+      "type": "Functional",
+      "priority": "Medium"
+    }
+  ],
+  "acceptanceCriteria": [
+    {
+      "acId": "TC_AC-001",
+      "reqId": "TC_REQ-001",
+      "description": "Apply for Leave — condition 1 accepted and validated"
+    },
+    {
+      "acId": "TC_AC-002",
+      "reqId": "TC_REQ-001",
+      "description": "Extract all business rules explicitly mentioned or implied"
+    }
+  ],
+  "businessRules": [
+    "must validate SAP payloads using SAP standard structures"
+  ],
+  "roles": [
+    "Customer",
+    "Admin",
+    "Key Access"
+  ],
+  "dataRules": [
+    "PO Number must be numeric and 10-15 digits",
+    "Vendor must follow YYYY-MM-DD format and be a valid calendar date",
+    "Material is a mandatory field with defined max length",
+    "Quantity must be a positive number within defined range",
+    "Unit Price must be a positive number within defined range"
+  ],
+  "implicitValidations": [
+    "Session must expire after inactivity period",
+    "All API responses must include appropriate status codes",
+    "Error messages must be user-friendly and descriptive",
+    "Audit log must capture all write operations in Procurement",
+    "Notifications must be triggered on key state changes"
+  ],
+  "agent": "Domain Analysis Agent",
+  "timestamp": "2026-03-12T14:05:58.839919",
+  "totalRequirements": 8,
+  "totalACs": 2,
+  "totalBusinessRules": 1
+}

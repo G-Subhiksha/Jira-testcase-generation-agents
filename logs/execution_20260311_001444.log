@@ -1,0 +1,47 @@
+2026-03-11 00:15:53,649 - llm_client - INFO - Using custom base URL: https://generativelanguage.googleapis.com/v1beta/openai/
+2026-03-11 00:15:53,649 - llm_client - INFO - Initialized OpenAI client with model: gemini-2.0-flash
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized classification agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized domain_analysis agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized positive_test agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized negative_edge agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized security_nf agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized traceability agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized deduplication agent
+2026-03-11 00:15:53,650 - orchestrator - INFO - Initialized excel_export agent
+2026-03-11 00:15:53,651 - orchestrator - INFO - ================================================================================
+2026-03-11 00:15:53,651 - orchestrator - INFO - STARTING AGENT ORCHESTRATION
+2026-03-11 00:15:53,651 - orchestrator - INFO - ================================================================================
+2026-03-11 00:15:53,651 - orchestrator - INFO - 
+[1/8] Running Classification Agent...
+2026-03-11 00:15:53,651 - ClassificationAgent - INFO - ============================================================
+2026-03-11 00:15:53,651 - ClassificationAgent - INFO - Starting ClassificationAgent
+2026-03-11 00:15:53,651 - ClassificationAgent - INFO - ============================================================
+2026-03-11 00:15:53,651 - ClassificationAgent - INFO - Analyzing document for classification...
+2026-03-11 00:15:54,902 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 400 Bad Request"
+2026-03-11 00:15:54,904 - llm_client - ERROR - LLM generation failed: Error code: 400 - [{'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}]
+2026-03-11 00:15:54,905 - ClassificationAgent - ERROR - LLM call failed: Error code: 400 - [{'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}]
+2026-03-11 00:15:54,905 - ClassificationAgent - ERROR - Classification failed: Error code: 400 - [{'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}]
+2026-03-11 00:15:54,905 - orchestrator - ERROR - Orchestration failed: Error code: 400 - [{'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}]
+2026-03-11 00:15:54,909 - __main__ - ERROR - Application error
+Traceback (most recent call last):
+  File "/Users/megala.v/Desktop/casegeni_2.0/test_case_generation_agents/main.py", line 272, in main
+    summary = orchestrator.execute(execution_input)
+  File "/Users/megala.v/Desktop/casegeni_2.0/test_case_generation_agents/orchestrator.py", line 73, in execute
+    classification = self.agents["classification"].execute(input_data)
+  File "/Users/megala.v/Desktop/casegeni_2.0/test_case_generation_agents/agents/classification_agent.py", line 30, in execute
+    response = self.call_llm(user_prompt, system_prompt, temperature=0.3)
+  File "/Users/megala.v/Desktop/casegeni_2.0/test_case_generation_agents/agents/base_agent.py", line 44, in call_llm
+    response = self.llm_client.generate(
+  File "/Users/megala.v/Desktop/casegeni_2.0/test_case_generation_agents/llm_client.py", line 75, in generate
+    return self._generate_openai(prompt, system_prompt, temperature, max_tokens)
+  File "/Users/megala.v/Desktop/casegeni_2.0/test_case_generation_agents/llm_client.py", line 93, in _generate_openai
+    response = self.client.chat.completions.create(
+  File "/Users/megala.v/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/megala.v/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+  File "/Users/megala.v/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/megala.v/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'API key not valid. Please pass a valid API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key not valid. Please pass a valid API key.'}]}}]

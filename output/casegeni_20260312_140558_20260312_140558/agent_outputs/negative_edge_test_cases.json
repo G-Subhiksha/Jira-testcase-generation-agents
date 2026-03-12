@@ -1,0 +1,489 @@
+{
+  "testCases": [
+    {
+      "testCaseId": "TC_REQ001_NEG_001",
+      "title": "Apply for Leave - Submit with Missing Mandatory Fields",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-001",
+      "preconditions": [
+        "User is logged in as Customer",
+        "'Apply for Leave' form/screen is open"
+      ],
+      "testData": {
+        "PO Number": "(empty)",
+        "Vendor": "(empty)",
+        "Material": "(empty)"
+      },
+      "steps": [
+        "Log in as Customer",
+        "Navigate to Apply for Leave",
+        "Leave all mandatory fields blank",
+        "Click Submit/Save"
+      ],
+      "expectedResults": [
+        "Form is NOT submitted",
+        "Validation error shown for each empty mandatory field",
+        "Error messages clearly identify which fields are required",
+        "No record created in the database"
+      ],
+      "traceability": "TC_REQ001/TC_AC-001"
+    },
+    {
+      "testCaseId": "TC_REQ002_NEG_002",
+      "title": "Approve Leave Request - Submit with Missing Mandatory Fields",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-002",
+      "preconditions": [
+        "User is logged in as Customer",
+        "'Approve Leave Request' form/screen is open"
+      ],
+      "testData": {
+        "PO Number": "(empty)",
+        "Vendor": "(empty)",
+        "Material": "(empty)"
+      },
+      "steps": [
+        "Log in as Customer",
+        "Navigate to Approve Leave Request",
+        "Leave all mandatory fields blank",
+        "Click Submit/Save"
+      ],
+      "expectedResults": [
+        "Form is NOT submitted",
+        "Validation error shown for each empty mandatory field",
+        "Error messages clearly identify which fields are required",
+        "No record created in the database"
+      ],
+      "traceability": "TC_REQ002/TC_AC-002"
+    },
+    {
+      "testCaseId": "TC_REQ003_NEG_003",
+      "title": "Reject Leave Request - Submit with Missing Mandatory Fields",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-003",
+      "preconditions": [
+        "User is logged in as Customer",
+        "'Reject Leave Request' form/screen is open"
+      ],
+      "testData": {
+        "PO Number": "(empty)",
+        "Vendor": "(empty)",
+        "Material": "(empty)"
+      },
+      "steps": [
+        "Log in as Customer",
+        "Navigate to Reject Leave Request",
+        "Leave all mandatory fields blank",
+        "Click Submit/Save"
+      ],
+      "expectedResults": [
+        "Form is NOT submitted",
+        "Validation error shown for each empty mandatory field",
+        "Error messages clearly identify which fields are required",
+        "No record created in the database"
+      ],
+      "traceability": "TC_REQ003/TC_AC-003"
+    },
+    {
+      "testCaseId": "TC_REQ004_NEG_004",
+      "title": "Invalid Vendor - Past Date / Invalid Format",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-004",
+      "preconditions": [
+        "User is logged in as Customer",
+        "Form with date field is accessible"
+      ],
+      "testData": {
+        "Vendor": "32/13/2025",
+        "Vendor (2)": "not-a-date",
+        "Vendor (3)": "2020-01-01 (past date if future required)"
+      },
+      "steps": [
+        "Navigate to the form containing 'Vendor'",
+        "Enter an invalid date (e.g., 32/13/2025)",
+        "Submit the form"
+      ],
+      "expectedResults": [
+        "Validation error: 'Invalid date format for Vendor'",
+        "Form is not submitted",
+        "User can correct the date and resubmit"
+      ],
+      "traceability": "TC_REQ004/TC_AC-004"
+    },
+    {
+      "testCaseId": "TC_REQ005_NEG_005",
+      "title": "Invalid Delivery Date - Past Date / Invalid Format",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-005",
+      "preconditions": [
+        "User is logged in as Customer",
+        "Form with date field is accessible"
+      ],
+      "testData": {
+        "Delivery Date": "32/13/2025",
+        "Delivery Date (2)": "not-a-date",
+        "Delivery Date (3)": "2020-01-01 (past date if future required)"
+      },
+      "steps": [
+        "Navigate to the form containing 'Delivery Date'",
+        "Enter an invalid date (e.g., 32/13/2025)",
+        "Submit the form"
+      ],
+      "expectedResults": [
+        "Validation error: 'Invalid date format for Delivery Date'",
+        "Form is not submitted",
+        "User can correct the date and resubmit"
+      ],
+      "traceability": "TC_REQ005/TC_AC-005"
+    },
+    {
+      "testCaseId": "TC_REQ006_NEG_006",
+      "title": "Quantity - Negative Value / Zero Not Allowed",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-006",
+      "preconditions": [
+        "Form with 'Quantity' field is accessible"
+      ],
+      "testData": {
+        "Quantity": "-1",
+        "Quantity (zero)": "0"
+      },
+      "steps": [
+        "Enter -1 in 'Quantity' field",
+        "Submit",
+        "Repeat with value 0"
+      ],
+      "expectedResults": [
+        "Error: 'Quantity must be a positive number'",
+        "Form is not submitted for negative or zero values"
+      ],
+      "traceability": "TC_REQ006/TC_AC-006"
+    },
+    {
+      "testCaseId": "TC_REQ007_NEG_007",
+      "title": "Unit Price - Negative Value / Zero Not Allowed",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-007",
+      "preconditions": [
+        "Form with 'Unit Price' field is accessible"
+      ],
+      "testData": {
+        "Unit Price": "-1",
+        "Unit Price (zero)": "0"
+      },
+      "steps": [
+        "Enter -1 in 'Unit Price' field",
+        "Submit",
+        "Repeat with value 0"
+      ],
+      "expectedResults": [
+        "Error: 'Unit Price must be a positive number'",
+        "Form is not submitted for negative or zero values"
+      ],
+      "traceability": "TC_REQ007/TC_AC-007"
+    },
+    {
+      "testCaseId": "TC_REQ008_NEG_008",
+      "title": "Apply for Leave - Field Exceeds Maximum Length",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-008",
+      "preconditions": [
+        "User is logged in as Customer",
+        "System is accessible"
+      ],
+      "testData": {
+        "PO Number": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (300 chars, exceeds max)"
+      },
+      "steps": [
+        "Enter text exceeding maximum allowed length",
+        "Submit"
+      ],
+      "expectedResults": [
+        "Validation error: 'Exceeds maximum length'",
+        "Field rejected or truncated"
+      ],
+      "traceability": "TC_REQ008/TC_AC-008"
+    },
+    {
+      "testCaseId": "TC_REQ009_NEG_009",
+      "title": "Apply for Leave - Future Date for Past-Only Field",
+      "category": "FUNC",
+      "priority": "P2",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-009",
+      "preconditions": [
+        "User is logged in as Customer",
+        "System is accessible"
+      ],
+      "testData": {
+        "Vendor": "2099-12-31"
+      },
+      "steps": [
+        "Enter a far-future date in a field that only allows past dates",
+        "Submit"
+      ],
+      "expectedResults": [
+        "Error: 'Date must not be in the future'",
+        "Form not submitted"
+      ],
+      "traceability": "TC_REQ009/TC_AC-009"
+    },
+    {
+      "testCaseId": "TC_REQ010_NEG_010",
+      "title": "Unauthorized Access - Procurement API Without Token",
+      "category": "API",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-010",
+      "preconditions": [
+        "API endpoint is accessible",
+        "No auth token is provided"
+      ],
+      "testData": {
+        "endpoint": "GET /api/v1/procurement",
+        "Authorization": "(none)"
+      },
+      "steps": [
+        "Send API request with no Authorization header",
+        "Capture the HTTP response"
+      ],
+      "expectedResults": [
+        "HTTP 401 Unauthorized",
+        "Response body: {\"error\": \"Unauthorized\"}",
+        "No data returned"
+      ],
+      "traceability": "TC_REQ010/TC_AC-010"
+    },
+    {
+      "testCaseId": "TC_REQ011_NEG_011",
+      "title": "Forbidden Access - Customer Attempts Privileged Action",
+      "category": "API",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-011",
+      "preconditions": [
+        "User logged in as Customer",
+        "Auth token available"
+      ],
+      "testData": {
+        "endpoint": "DELETE /api/v1/procurement/{id}",
+        "Role": "Customer"
+      },
+      "steps": [
+        "Log in as Customer",
+        "Send DELETE request with valid ID",
+        "Capture response"
+      ],
+      "expectedResults": [
+        "HTTP 403 Forbidden",
+        "Record is NOT deleted",
+        "Error message returned explaining insufficient permissions"
+      ],
+      "traceability": "TC_REQ011/TC_AC-011"
+    },
+    {
+      "testCaseId": "TC_REQ012_NEG_012",
+      "title": "Apply for Leave - Duplicate Record Submission",
+      "category": "FUNC",
+      "priority": "P2",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-012",
+      "preconditions": [
+        "A apply for leave with the same unique identifier already exists",
+        "User is logged in as Customer"
+      ],
+      "testData": {
+        "PO Number": "EXISTING_RECORD_001"
+      },
+      "steps": [
+        "Navigate to Apply for Leave screen",
+        "Fill in data identical to an existing record",
+        "Submit the form"
+      ],
+      "expectedResults": [
+        "System rejects the duplicate submission",
+        "Error: 'Record already exists'",
+        "HTTP 409 Conflict (for API calls)",
+        "No duplicate created in database"
+      ],
+      "traceability": "TC_REQ012/TC_AC-012"
+    },
+    {
+      "testCaseId": "TC_REQ013_NEG_013",
+      "title": "Invalid State Transition - Skip Mandatory Step in Workflow",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Maybe",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-013",
+      "preconditions": [
+        "Multi-step workflow is configured",
+        "Record is in initial/draft state"
+      ],
+      "testData": {
+        "WorkflowStep": "Attempt to reach final step directly",
+        "CurrentStatus": "Draft"
+      },
+      "steps": [
+        "Create a record in Draft state",
+        "Attempt to jump to final approved status without going through intermediate steps",
+        "Capture system response"
+      ],
+      "expectedResults": [
+        "System enforces workflow sequence",
+        "Error: 'Invalid state transition'",
+        "Expected workflow: Moni → ring of interface st",
+        "Record remains in current state"
+      ],
+      "traceability": "TC_REQ013/TC_AC-013"
+    },
+    {
+      "testCaseId": "TC_REQ014_NEG_014",
+      "title": "XSS Script Injection in Apply for Leave Input Field",
+      "category": "FUNC",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-014",
+      "preconditions": [
+        "Input form is accessible"
+      ],
+      "testData": {
+        "PO Number": "<script>alert('xss')</script>"
+      },
+      "steps": [
+        "Enter XSS payload in a text input field",
+        "Submit and view the saved record"
+      ],
+      "expectedResults": [
+        "Script tag is NOT executed in the browser",
+        "Input is sanitized or escaped",
+        "No alert popup appears",
+        "System logs the suspicious input"
+      ],
+      "traceability": "TC_REQ014/TC_AC-014"
+    },
+    {
+      "testCaseId": "TC_REQ015_NEG_015",
+      "title": "SQL Injection Attempt via Procurement API/Form",
+      "category": "API",
+      "priority": "P1",
+      "automation": "Yes",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-015",
+      "preconditions": [
+        "API/form input field accepts free text"
+      ],
+      "testData": {
+        "input": "' OR '1'='1",
+        "input2": "'; DROP TABLE users;--"
+      },
+      "steps": [
+        "Enter SQL injection string in an input field",
+        "Submit"
+      ],
+      "expectedResults": [
+        "System rejects or sanitizes the injection payload",
+        "No database error exposed in response",
+        "Database integrity maintained",
+        "Security event logged"
+      ],
+      "traceability": "TC_REQ015/TC_AC-015"
+    },
+    {
+      "testCaseId": "TC_REQ016_NEG_016",
+      "title": "Concurrent Duplicate Submissions - Race Condition in Procurement",
+      "category": "FUNC",
+      "priority": "P2",
+      "automation": "Maybe",
+      "domain": "Procurement",
+      "projectState": "New",
+      "stateDrivenFocus": "Discovery, data model validation, first-time build",
+      "acMapped": "TC_AC-016",
+      "preconditions": [
+        "Two user sessions are open simultaneously"
+      ],
+      "testData": {
+        "UniqueKey": "SAME_KEY_001",
+        "Sessions": "2 concurrent browser sessions"
+      },
+      "steps": [
+        "Open same form in two browser sessions simultaneously",
+        "Fill both with identical unique-key data",
+        "Submit both at the same time"
+      ],
+      "expectedResults": [
+        "Only one record is created",
+        "Second submission returns error: 'Record already exists'",
+        "No data corruption or duplicate records in DB"
+      ],
+      "traceability": "TC_REQ016/TC_AC-016"
+    }
+  ],
+  "count": 16,
+  "techniqueBreakdown": {
+    "Unknown": 16
+  },
+  "agent": "Negative & Edge Case Agent",
+  "timestamp": "2026-03-12T14:05:58.877466",
+  "totalTestCases": 16,
+  "testType": "Negative & Edge Case"
+}

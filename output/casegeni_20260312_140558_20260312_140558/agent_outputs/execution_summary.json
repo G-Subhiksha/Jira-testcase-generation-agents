@@ -1,0 +1,146 @@
+{
+  "executionTimestamp": "2026-03-12T14:05:58.828297",
+  "totalDuration": 0.7,
+  "outputDirectory": "output\\casegeni_20260312_140558_20260312_140558",
+  "classification": {
+    "applicationType": "Cards & Payments",
+    "domain": "Cards & Payments",
+    "projectState": "New"
+  },
+  "testSuiteMetrics": {
+    "totalTestCases": 36,
+    "byCategory": {
+      "FUNC": 19,
+      "API": 5,
+      "NF": 12
+    },
+    "byPriority": {
+      "P1": 29,
+      "P2": 6,
+      "P3": 1
+    },
+    "byAutomation": {
+      "Yes": 30,
+      "Maybe": 6
+    }
+  },
+  "coverageMetrics": {
+    "totalRequirements": 8,
+    "totalAcceptanceCriteria": 2,
+    "fullyCovered": 0,
+    "partiallyCovered": 28,
+    "notCovered": 0,
+    "coveragePercentage": 0.0,
+    "averageTestsPerAC": 18.0,
+    "totalTestCases": 36,
+    "coverageGaps": 28,
+    "gapDetails": [
+      {
+        "requirementId": "TC_REQ001",
+        "requirementTitle": null,
+        "storyId": "",
+        "acId": "TC_AC-001",
+        "acDescription": "Apply for Leave — condition 1 accepted and validated",
+        "testCases": [
+          "TC_REQ001_FUNC_001",
+          "TC_REQ001_NEG_001"
+        ],
+        "testCasesByCategory": {
+          "FUNC": [
+            "TC_REQ001_FUNC_001",
+            "TC_REQ001_NEG_001"
+          ]
+        },
+        "totalTests": 2,
+        "coverage": "Partial"
+      },
+      {
+        "requirementId": "TC_REQ002",
+        "requirementTitle": null,
+        "storyId": "",
+        "acId": "TC_AC-002",
+        "acDescription": "Extract all business rules explicitly mentioned or implied",
+        "testCases": [
+          "TC_REQ002_FUNC_002",
+          "TC_REQ002_NEG_002"
+        ],
+        "testCasesByCategory": {
+          "FUNC": [
+            "TC_REQ002_FUNC_002",
+            "TC_REQ002_NEG_002"
+          ]
+        },
+        "totalTests": 2,
+        "coverage": "Partial"
+      },
+      {
+        "requirementId": "TC_REQ003",
+        "requirementTitle": null,
+        "storyId": "",
+        "acId": "TC_AC-003",
+        "acDescription": "Verify Reject Leave Request - Successful Approval by Admin",
+        "testCases": [
+          "TC_REQ003_FUNC_003",
+          "TC_REQ003_NEG_003"
+        ],
+        "testCasesByCategory": {
+          "FUNC": [
+            "TC_REQ003_FUNC_003",
+            "TC_REQ003_NEG_003"
+          ]
+        },
+        "totalTests": 2,
+        "coverage": "Partial"
+      },
+      {
+        "requirementId": "TC_REQ004",
+        "requirementTitle": null,
+        "storyId": "",
+        "acId": "TC_AC-004",
+        "acDescription": "Verify Leave Balance Enquiry - Valid Record Display",
+        "testCases": [
+          "TC_REQ004_FUNC_004",
+          "TC_REQ004_NEG_004"
+        ],
+        "testCasesByCategory": {
+          "FUNC": [
+            "TC_REQ004_FUNC_004",
+            "TC_REQ004_NEG_004"
+          ]
+        },
+        "totalTests": 2,
+        "coverage": "Partial"
+      },
+      {
+        "requirementId": "TC_REQ005",
+        "requirementTitle": null,
+        "storyId": "",
+        "acId": "TC_AC-005",
+        "acDescription": "Verify Leave History View - Valid Record Display",
+        "testCases": [
+          "TC_REQ005_FUNC_005",
+          "TC_REQ005_NEG_005"
+        ],
+        "testCasesByCategory": {
+          "FUNC": [
+            "TC_REQ005_FUNC_005",
+            "TC_REQ005_NEG_005"
+          ]
+        },
+        "totalTests": 2,
+        "coverage": "Partial"
+      }
+    ]
+  },
+  "optimizationMetrics": {
+    "originalCount": 36,
+    "duplicatesRemoved": 0,
+    "redundanciesRemoved": 0,
+    "reductionPercentage": 0
+  },
+  "outputFiles": {
+    "excelFile": "output\\casegeni_20260312_140558_20260312_140558\\test_cases.xlsx",
+    "jsonFile": "output\\casegeni_20260312_140558_20260312_140558\\test_cases.json",
+    "agentOutputs": "output\\casegeni_20260312_140558_20260312_140558\\agent_outputs"
+  }
+}
